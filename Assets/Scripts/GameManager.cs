@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private SpawnerCoins coins;
 
     private float score;
+    private float coin;
 
     private void Awake()
     {
@@ -84,5 +85,10 @@ public class GameManager : MonoBehaviour
     {
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
         score += gameSpeed * Time.deltaTime;
+    }
+
+    public void IncreaseCoin()
+    {
+        coin++;
     }
 }

@@ -1,12 +1,13 @@
 using UnityEngine;
 
-public class CoinCollectible : MonoBehaviour
+public class CollectibleCoin : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.CompareTag("Player"))
         {
-
+            GameManager.Instance.IncreaseCoin();
+            gameObject.SetActive(false);
         }
     }
 }
