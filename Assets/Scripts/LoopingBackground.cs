@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class LoopingBackground : MonoBehaviour
 {
-    [SerializeField] private float backgroundSpeed;
     [SerializeField] private Renderer backgroundRenderer;
     public string sortingLayerName = string.Empty; //initialization before the methods
     public int orderInLayer = 0;

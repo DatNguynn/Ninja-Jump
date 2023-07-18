@@ -7,22 +7,26 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private LayerMask groundLayer;
 
-    public float gravity = 9.81f * 2f;
-
     private BoxCollider2D boxCollider;
     private Rigidbody2D rb;
+    private Animator anim;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCollider = rb.GetComponent<BoxCollider2D>();
-        rb.velocity = Vector2.down * gravity * Time.deltaTime;
+        boxCollider = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
     }
+
+    /*private void OnEnable()
+    {
+        Vector3 pos = transform.position;
+        rb.velocity = pos;
+    }*/
 
     private void Update()
     {
         /*rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);*/
-        
         if (Input.GetKeyDown(KeyCode.UpArrow))
             Jump(speed, -1.5f);
         else if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -54,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Obstacle"))
         {
+            anim.SetTrigger("die");
             GameManager.Instance.GameOver();
         }
     }
