@@ -6,27 +6,31 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    [Header("Game Speed")]
     public float initialGameSpeed = 5f;
     public float gameSpeedIncrease = 0.1f;
-    public float gameSpeed { get; private set; }
+    public float GameSpeed { get; private set; }
 
+    [Header("UI")]
     public GameObject gameOverScreen;
-    
-/*    private PlayerMovement player;
-    private Spawner spawner;
-    private SpawnerCoins spawnerCoins;*/
+    public Text coinsText;
+    public Text scoreText;
+
+    private Spawner spawnerGround;
+    private SpawnerWall spawnerWall;
+    private SpawnerCoins spawnerCoins;
 
     private float score;
     private float coin;
 
     private void Awake()
     {
+        gameOverScreen.SetActive(false);
+        
         if (Instance != null)
             DestroyImmediate(gameObject);
         else
             Instance = this;
-
-        gameOverScreen.SetActive(false);
     }
 
     private void OnDestroy()
@@ -35,15 +39,16 @@ public class GameManager : MonoBehaviour
             Instance = null;
     }
 
-/*    private void Start()
+    private void Start()
     {
-
-        player = FindObjectOfType<PlayerMovement>();
-        spawner = FindObjectOfType<Spawner>();
+        spawnerGround = FindObjectOfType<Spawner>();
+        spawnerWall = FindObjectOfType<SpawnerWall>();
         spawnerCoins = FindObjectOfType<SpawnerCoins>();
 
-        NewGame();
-    }*/
+        score = 0f;
+        enabled = true;
+        GameSpeed = initialGameSpeed;
+    }
 
     public void NewGame()
     {
@@ -58,37 +63,37 @@ public class GameManager : MonoBehaviour
         {
             Destroy(coin.gameObject);
         }*/
-        score = 0f;
-        gameSpeed = initialGameSpeed;
-        /*enabled = true;
-
+        /*
         player.gameObject.SetActive(true);
         spawner.gameObject.SetActive(true);
         spawnerCoins.gameObject.SetActive(true);
 
         gameOverScreen.gameObject.SetActive(false);*/
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1f;
     }
 
     public void GameOver()
     {
-        gameSpeed = 0f;
-        /*enabled = false;
+        GameSpeed = 0f;
+        enabled = false;
+        gameOverScreen.SetActive(true);
+        spawnerGround.gameObject.SetActive(false);
+        spawnerWall.gameObject.SetActive(false);
+        spawnerCoins.gameObject.SetActive(false);
+    }
 
-        player.gameObject.SetActive(false);
-        spawner.gameObject.SetActive(false);
-        spawnerCoins.gameObject.SetActive(false);*/
-
-        gameOverScreen.gameObject.SetActive(true);
-        Time.timeScale = 0f;
-
+    public void Home()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void Update()
     {
-        gameSpeed += gameSpeedIncrease * Time.deltaTime;
-        score += gameSpeed * Time.deltaTime;
+        GameSpeed += gameSpeedIncrease * Time.deltaTime;
+        score += GameSpeed * Time.deltaTime;
+        coinsText.text = coin.ToString();
+        scoreText.text = Mathf.FloorToInt(score).ToString("D5");
     }
 
     public void IncreaseCoin()
