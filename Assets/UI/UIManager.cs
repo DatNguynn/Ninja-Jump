@@ -28,4 +28,9 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
