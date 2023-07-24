@@ -52,24 +52,6 @@ public class GameManager : MonoBehaviour
 
     public void NewGame()
     {
-        /*Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
-        Coins[] coins = FindObjectsOfType<Coins>();
-
-        foreach (var obstacle in obstacles)
-        {
-            Destroy(obstacle.gameObject);
-        }
-        foreach (var coin in coins)
-        {
-            Destroy(coin.gameObject);
-        }*/
-        /*
-        player.gameObject.SetActive(true);
-        spawner.gameObject.SetActive(true);
-        spawnerCoins.gameObject.SetActive(true);
-
-        gameOverScreen.gameObject.SetActive(false);*/
-        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
