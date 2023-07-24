@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public Text coinsText;
     public Text scoreText;
+    public Text hiscoreText;
 
     private Spawner spawnerGround;
     private SpawnerWall spawnerWall;
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
         score = 0f;
         enabled = true;
         GameSpeed = initialGameSpeed;
+        UpdateHighScore();
     }
 
     public void NewGame()
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
         spawnerGround.gameObject.SetActive(false);
         spawnerWall.gameObject.SetActive(false);
         spawnerCoins.gameObject.SetActive(false);
+        UpdateHighScore();
     }
 
     public void Home()
@@ -81,5 +84,18 @@ public class GameManager : MonoBehaviour
     public void IncreaseCoin()
     {
         coin++;
+    }
+
+    private void UpdateHighScore()
+    {
+        float hiscore = PlayerPrefs.GetFloat("hiscore", 0);
+
+        if (score > hiscore)
+        {
+            hiscore = score;
+            PlayerPrefs.SetFloat("hiscore", hiscore);
+        }
+
+        hiscoreText.text = Mathf.FloorToInt(hiscore).ToString("D5");
     }
 }
