@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1414751188576306834}
   - component: {fileID: 264384034735042636}
   - component: {fileID: 9187933351638910931}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mainlev_build_89
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 277192826938553519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: -5, z: 5}
+  m_LocalScale: {x: 6, y: -6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4269040391554843774}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4269040391554843774}
   - component: {fileID: 1917512543584118047}
   - component: {fileID: -6916290168218263794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3 Rocks Wall
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc6729807bd26946a74031d12b8c5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &-6916290168218263794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -234,7 +235,7 @@ GameObject:
   - component: {fileID: 1491616312960787240}
   - component: {fileID: 3721729254891431611}
   - component: {fileID: 1050515072698905177}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mainlev_build_89 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 7496779010204271803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.543, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: -5, z: 5}
+  m_LocalScale: {x: 6, y: -6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4269040391554843774}
@@ -364,7 +365,7 @@ GameObject:
   - component: {fileID: 7714870077295592234}
   - component: {fileID: 8431359212165026985}
   - component: {fileID: 2967577066085797006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mainlev_build_89 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 7780331926846378615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.68, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: -5, z: 5}
+  m_LocalScale: {x: 6, y: -6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4269040391554843774}

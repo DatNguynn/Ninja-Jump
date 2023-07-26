@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 384604703173103796}
   - component: {fileID: 4060497419032939490}
   - component: {fileID: 8984238480562712982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FiretrapWall
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -165,3 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc6729807bd26946a74031d12b8c5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1

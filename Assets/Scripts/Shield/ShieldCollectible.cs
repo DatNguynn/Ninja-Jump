@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class ShieldCollectible : MonoBehaviour
 {
+    public float shieldValue;
     private float leftEdge;
-    public float damage;
 
     private void Start()
     {
@@ -21,7 +21,8 @@ public class Obstacle : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            collision.GetComponent<Health>().TakeDamage(damage);
+            collision.GetComponent<Health>().AddHealth(shieldValue);
+            gameObject.SetActive(false);
         }
     }
 }

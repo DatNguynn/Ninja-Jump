@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8040211900291655652}
   - component: {fileID: 4619332476397809361}
   - component: {fileID: 5271416194365517431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mainlev_build_89
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2232275585143373995}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: -5, z: 5}
+  m_LocalScale: {x: 6, y: -6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892737353258753021}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 659317849473195714}
   - component: {fileID: 5756001680156090829}
   - component: {fileID: 9183780426458026954}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mainlev_build_89 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ Transform:
   m_GameObject: {fileID: 4508220285678507900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.62, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: -5, z: 5}
+  m_LocalScale: {x: 6, y: -6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892737353258753021}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 7892737353258753021}
   - component: {fileID: 8445878793043898890}
   - component: {fileID: -8938918506425517252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2 Rocks Wall
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc6729807bd26946a74031d12b8c5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &-8938918506425517252
 BoxCollider2D:
   m_ObjectHideFlags: 0

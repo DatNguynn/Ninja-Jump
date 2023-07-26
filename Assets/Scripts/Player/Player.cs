@@ -2,20 +2,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static PlayerMovement Instance { get; private set; }
-
-    [SerializeField] private float speed;
-    [SerializeField] private LayerMask groundLayer;
+    public float speed;
+    public LayerMask groundLayer;
 
     private BoxCollider2D boxCollider;
     private Rigidbody2D rb;
-    private Animator anim;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
-        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -34,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
             
     }
 
-    private void Jump(float _speed, float localScaleY)
+    public void Jump(float _speed, float localScaleY)
     {
         rb.velocity = new Vector2(rb.velocity.x, _speed);
         transform.localScale = new Vector3(1.5f, localScaleY, 1.5f); 
@@ -52,14 +48,14 @@ public class PlayerMovement : MonoBehaviour
         return raycastHit.collider != null;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Obstacle"))
+        if(collision.CompareTag("Obstacle"))
         {
-            anim.SetTrigger("die");
-            Jump(-speed, 1.5f);
+            collision.GetComponent<Health>().TakeDamage(damage);
+            *//*Jump(-speed, 1.5f);
             enabled = false;
-            GameManager.Instance.GameOver();
+            GameManager.Instance.GameOver();*//*
         }
-    }
+    }*/
 }
