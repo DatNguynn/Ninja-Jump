@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0c8a2acff266b4dbe071cb164d3233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialGameSpeed: 7
+  initialGameSpeed: 12.5
   gameSpeedIncrease: 0.1
   gameOverScreen: {fileID: 708296048}
   coinsText: {fileID: 679139513}
@@ -2998,7 +2998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2014481930
 Animator:
   serializedVersion: 5

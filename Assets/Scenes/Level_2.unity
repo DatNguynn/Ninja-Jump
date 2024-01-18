@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0c8a2acff266b4dbe071cb164d3233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialGameSpeed: 7
+  initialGameSpeed: 7.5
   gameSpeedIncrease: 0.1
   gameOverScreen: {fileID: 708296048}
   coinsText: {fileID: 679139513}
@@ -1186,6 +1186,7 @@ GameObject:
   - component: {fileID: 1138149821}
   - component: {fileID: 1138149820}
   - component: {fileID: 1138149824}
+  - component: {fileID: 1138149825}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1369,6 +1370,22 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1138149825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138149818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e70b09f4454dd4f8aeb5a2e4973977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 1
+  currentShieldbar: {fileID: 0}
+  iFramesDuration: 0
+  numberOfFlashes: 0
 --- !u!1 &1194772452
 GameObject:
   m_ObjectHideFlags: 0
